@@ -1,2 +1,17 @@
 \subsection{Jet Algorithm with Tracks}
 \label{sec:TrkJets}
+
+A rapid firmware implemented track clustering algorithm allows to combine an integrated collection of tracks and output a collection of track-based jets. The track-based jets can then be used for globral trigger quantities like $H_{T}$ and $H_{T}^{miss}$. As described in Section~\ref{sec:TkMET}, the same set of track purity requirements are applied to the input selection of tracks to keep the L1 trigger objects resilient to pileup. In this section, we describe the simple track clustering alogirthm that is implemented in firmware. Though the algorithm does not make use of an input L1 primary vertex, it can be used as input to the algorithm to make the algorithm more robust against conaminating L1 tracks from pileup. 
+
+The clustering of tracks in the $\eta$-$\phi$ plane is done using a nearest-neighbor approach in two 1-dimensional steps. The first phase of the algorithm parses tracks into 27 $\phi$ regions and 24 $\eta$ regions, which divides the region of tracking acceptance into cells of that are $\approx 0.2\times 0.2$. The $trk_{z0} $ is also used to assign the track to a z-cell along the beam spot. The clustering in $\eta$-$\phi$ is done in z-regions that span the beamspot. In between every two z-cells is a third cell to cover the overlapping region and eliminate edge cases where the primary vertex is close to the edge of a given bin. This gives a maximal jet size that is approximately a 3x3 square of cells with a half-side equal to $\Delta R=0.3$. The width of the z-cell used for this study is 1cm. 
+
+ Only tracks passing the purity requirements in Table~\ref{tab:trkpurity} are clustered. In the first layer of track clustering in $\phi$, the sum of track $p_{T}$, $\sum p_{T}^{trk}$, in each cell is compared to its two neighbors in $\phi$ and the $p_{T}$ is summed into the local maximum cell. The result of this step is to create a list of 1-dimensional track $\sum p_{T}^{trk}$ clusters based on the local maxima in the $\phi$ dimension, so that the minimum distance between any two $\phi$-clusters is one cell. The next step is to take the $\phi$-clusters and check if cells neighbor each other in $\eta$, and if they do they are merged into the $
+\phi$-cluster with larger $\sum p_{T}^{trk}$. The track-based jets are then the list of cells from the local maximum in the $\eta$-$\phi$ plane for a given z-cell. Jets from the primary interaction are found by summing the track-based jet $p_{T}$, $H_{T}^{trk}$, in each z-cell and taking the jets from the z-bin with the largest $H_{T}^{trk}$.  In addition, to the $\sum p_{T}^{trk}$, the track multiplicity is also summed in the same procedure to provide an additional handle for the output collection of track-based jets. This approach gives a list of track-based jet positions in $\eta$,$\phi$, $z_{0}$, $p_{T}$, and $N_{tracks}$.
+
+
+
+
+
+%This section outlines a firmware implemented track clustering algorithm which takes as input a collection of tracks and outputs a collection of track jets. The algorithm does not rely on an input L1 primary vertex position. Instead the clustering is performed in z-regions across the beam spot and flags the jets from the primary collision based on the z-region with the largest track $H_{T}$. 
+
+%The clustering in the $\eta$-$\phi$ plane is done in two 1-Dimensional steps. The first phase of the algorithm parses tracks into 27 $phi$ regions and 24 $\eta$ regions. Tracks are also required to pass the track purity requirements as for the track-based 
