@@ -1,8 +1,9 @@
 \subsection{Track-based Missing Energy}
 \label{sec:TkMET}
 
-The vector sum of the transverse momenta (MET) of all particles produced in the primary collision is a key input for BSM triggers at Level-1. For the track-based alogirthm described in this section, one of the main challenges is excluding tracks from bad combinations that give high transverse momentum. Though these tracks are rare in pileup after requiring a tight window around the primary vertex z position, events containing these tracks would dominate an L1 MET trigger. The algorithm makes use of track purity requirements in addition to the $\Delta z\left(PV_{z}, trk_{z}\right)$ requirement to reduce the number of events with poorly measured momentum balance. 
+The vector sum of the transverse momenta (MET) of all particles produced in the primary collision is a key input for BSM triggers at Level 1. For the track-based algorithm described in this section, one of the main challenges is excluding tracks from bad combinations, ``fake tracks," that give high transverse momentum. Although these tracks are rare in pileup after requiring a tight window around the primary vertex z position, events containing these tracks would dominate an L1 MET trigger. The algorithm makes use of track purity requirements in addition to the $\Delta z\left(PV_{z}, trk_{z}\right)$ requirement to reduce the number of events with poorly measured momentum balance.
 
+<<<<<<< HEAD
 The track purity selection is based mainly on the confines of the detector, the track reconstruction algoirthm, and  the available track fit quality parameters. The track $p_{T}$ and $\eta$ requirements shown in Table~\ref{tab:trkpurity} are based on the minimal $p_{T}$ of tracks that can be reconstructed reliably and the tracking acceptance. The minimal number of track layers is also based on the minimal requirement for the track fit. There is a further requirement that 4 of the track layers must also have stubs to remove any 4-stub tracks that were created with only hits in 3 layers. Requirements on the track fit quality measured as $\chi^{2}_{n.dof}$ is set to a minimum of 50 to reduce tracks that are poorly reconstructed. To further reject high momentum tracks from poorly reconstructed track hit combinations, a new variable, bend consistency, $\chi^{2}_{bend}$ is measured. This measure of the bend of the track is uncorrelated to the $\chi^{2}_{n.dof}$ from the track fit. $\chi^{2}_{bend}$ is calculated based on the horizontal distance between the two consecutive track hits in a track module, the stubs. The bend consistency quantifys how compatible the bend of the track hits measured in the detector is compatible with the reconstructed track $p_{T}$. A bad combination of track hits tend to have a large value of bend consistency compared to well-reconstructed tracks. The cut on $\chi^{2}_{bend}$ is optimized to lower the fraction of poorly reconstructed tracks that are included in the MET caculation as well as maintaining a reasonable L1 data-rate for a track-based MET trigger. [Here you would reference the fake-rate and the L1 Rate Reduction plot]
 \begin{table}[h]
 \begin{tabular}{|c|c|}
@@ -26,8 +27,49 @@ $\eta$ range & $\Delta z\left(PV_{z}, trk_{z}\right)$\\
 \caption{Window around the primary vertex optimized for each pseudorapidy range. }
 \label{tab:zwindows}
 \end{table}
+=======
+The track purity selection (Table \ref{tab:tkMETcuts}) is based mainly on the confines of the detector, the track reconstruction algorithm, and the available track fit quality parameters. The track $p_{T}$ and $\eta$ requirements shown in Table ~\ref{tab:tkMETcuts} are based on the minimal $p_{T}$ of tracks that can be reconstructed reliably and the tracking acceptance. The minimal number of track layers is also based on the minimal requirement for the track fit. There is a further requirement that four of the track layers must also have stubs to remove any 4-stub tracks that were created with hits in only three layers. A requirement on the track fit quality measured as $\chi^{2}_{n.dof}$ is set to a minimum of 50 to reduce poorly reconstructed tracks. To further reject high momentum fake tracks, a new variable, bend chi-squared, $\chi^{2}_{bend}$, is measured. This measure of the bend of the track is uncorrelated to the $\chi^{2}_{n.dof}$ from the track fit, as the track fit only relies on one hit per module, and the $\chi^{2}_{bend}$ is calculated from both hits. $\chi^{2}_{bend}$ is calculated based on the horizontal distance between the two consecutive track hits in a track module, the stubs. The bend chi-squared quantifies how compatible the bend of the track hits measured in the detector is with the reconstructed track $p_{T}$. A bad combination of track hits tends to have a large value of bend chi-squared compared to well-reconstructed tracks. The cut on $\chi^{2}_{bend}$ is optimized to lower the fraction of poorly reconstructed tracks that are included in the MET calculation, as well as maintain a reasonable L1 data-rate for a track-based MET trigger. [Here you would reference the fake-rate and the L1 Rate Reduction plot]
 
-Including these criteria for the optimized track MET measurement reduces the threshold at at data-taking rate of 35kHz from 235GeV to 60GeV. This threshold corresponds close to the simulated true track MET performance. The threshold of 60 GeV gives 95$\%$ efficiency for the trigger turn at 300GeV in generator level MET. 
+The L1 vertex described in the TSA firmware algorithm in Section~\ref{sec:FastHisto} is an input for the L1 track-based MET algorithm. A window of $\Delta z\left(PV_{z}, trk_{z}\right)$ is required for pseudo-rapidity regions within the tracking acceptance. Table~\ref{tab:tkMETDeltaz} shows the range of values for the allowed range of track-z around the measured primary vertex z. Central tracks allow for a tight window of 0.4 cm, while more forward tracks need a wider z-window (as large as 2.2 cm) to include tracks within $3\sigma$ of the Gaussian track z-resolution.
+
+Including these criteria for the optimized track MET measurement reduces the threshold at a data-taking rate of 35 kHz from 235 GeV to 60 GeV. This threshold aligns closely to the simulated true track MET performance. The threshold of 60 GeV gives 95$\%$ efficiency for the trigger turn-on at 300 GeV in generator-level MET.
 
 
+\begin{table}
+\centering
+\label{tab:tkMETcuts}
+\caption{List of cuts optimized for track MET.}
+\begin{tabular}{ |c|c| }
+\hline
+p$_\textrm{T}$  & $>$ 2 GeV \\
+p$_\textrm{T}$ & saturate at 200 GeV \\
+$|\eta|$  & $<$ 2.4 \\
+Num. stubs  & $\geq$ 4 \\
+$|\textrm{z}_{0}|$  & $<$ 15 cm \\
+$|\Delta \textrm{z}|$  & by track $\eta$ \\
+$\chi^{2}/\textrm{dof}$ & $<$ 50 \\
+$\chi^{2}_{\textrm{bend}}$ & $<$ 1.75 \\
+\hline
+\end{tabular}
+\end{table}
 
+\begin{table}
+\centering
+\label{tab:tkMETDeltaz}
+\caption{$\Delta$z cut based on track $\eta$, within 3 $\sigma$ of the z-resolution.}
+\begin{tabular}{ |c|c| }
+\hline
+$|\eta|$ range & $|\Delta z|$ (cm) \\
+\hline
+0.0 - 0.7 & $<$ 0.4 cm \\
+0.7 - 1.0 & $<$ 0.6 cm \\
+1.0 - 1.2 & $<$ 0.76 cm \\
+1.2 - 1.6 & $<$ 1.0 cm \\
+1.6 - 2.0 & $<$ 1.7 cm \\
+2.0 - 2.4 & $<$ 2.2 cm \\
+
+\hline
+\end{tabular}
+\end{table}
+
+Fake rate and the L1 Rate Reduction (min bias) plot
