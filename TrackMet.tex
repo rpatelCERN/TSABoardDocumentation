@@ -3,7 +3,14 @@
 
 The vector sum of the transverse momenta (MET) of all particles produced in the primary collision is a key input for BSM triggers at Level-1. For the track-based alogirthm described in this section, one of the main challenges is excluding tracks from bad combinations that give high transverse momentum. Though these tracks are rare in pileup after requiring a tight window around the primary vertex z position, events containing these tracks would dominate an L1 MET trigger. The algorithm makes use of track purity requirements in addition to the $\Delta z\left(PV_{z}, trk_{z}\right)$ requirement to reduce the number of events with poorly measured momentum balance. 
 
-The track purity selection is based mainly on the confines of the detector, the track reconstruction algoirthm, and  the available track fit quality parameters. The track $p_{T}$ and $\eta$ requirements shown in Table~\ref{tab:trkpurity} are based on the minimal $p_{T}$ of tracks that can be reconstructed reliably and the tracking acceptance. The minimal number of track layers is also based on the minimal requirement for the track fit. There is a further requirement that 4 of the track layers must also have stubs to remove any 4-stub tracks that were created with only hits in 3 layers. Requirements on the track fit quality measured as $\chi^{2}_{n.dof}$ is set to a minimum of 50 to reduce tracks that are poorly reconstructed. To further reject high momentum tracks from poorly reconstructed track hit combinations, a new variable, bend consistency, $\chi^{2}_{bend}$ is measured. This measure of the bend of the track is uncorrelated to the $\chi^{2}_{n.dof}$ from the track fit. $\chi^{2}_{bend}$ is calculated based on the horizontal distance between the two consecutive track hits in a track module, the stubs. The bend consistency quantifys how compatible the bend of the track hits measured in the detector is compatible with the reconstructed track $p_{T}$. A bad combination of track hits tend to have a large value of bend consistency compared to well-reconstructed tracks. The cut on $\chi^{2}_{bend}$ is optimized to lower the fraction of poorly reconstructed tracks that are included in the MET caculation as well as maintaining a reasonable L1 data-rate for a track-based MET trigger. [Here you would reference the fake-rate and the L1 Rate Reduction plot]
+The track purity selection is based mainly on the confines of the detector, the track reconstruction algoirthm, and the available track fit quality parameters. The track $p_{T}$ and $\eta$ requirements shown in Table~\ref{tab:trkpurity} are based on the minimal $p_{T}$ of tracks that can be reconstructed reliably and the tracking acceptance. The minimal number of track layers is also based on the minimal requirement for the track fit. There is a further requirement that 4 of the track layers must also have stubs to remove any 4-stub tracks that were created with only hits in 3 layers. Requirements on the track fit quality measured as $\chi^{2}_{n.dof}$ is set to a minimum of 50 to reduce tracks that are poorly reconstructed. To further reject high momentum tracks from poorly reconstructed track hit combinations, a new variable, bend consistency, $\chi^{2}_{bend}$ is measured. This measure of the bend of the track is uncorrelated to the $\chi^{2}_{n.dof}$ from the track fit. $\chi^{2}_{bend}$ is calculated based on the horizontal distance between the two consecutive track hits in a track module, the stubs. The bend consistency quantifys how compatible the bend of the track hits measured in the detector is compatible with the reconstructed track $p_{T}$. The bend consistency variable is defined as:
+\begin{equation}
+\chi^{2}_{bend} =~ \frac{1}{N_{stubs}} \sum_{i=1}^{N_{stubs}}\Big(\frac{\beta_i - \beta_i^{exp}}{\sigma_{i}}\Big)^2
+\end{equation}
+where $N_{stubs}$ is the total number of stubs comprising the track, $\beta_{i}$ is the measured bend angle for stub i, and $\beta_i^{exp}$ is the expected bend angle based on the track. A bad combination of track hits tend to have a large value of bend consistency compared to well-reconstructed tracks. The cut on $\chi^{2}_{bend}$ is optimized to lower the fraction of poorly reconstructed tracks that are included in the MET caculation as well as maintaining a reasonable L1 data-rate for a track-based MET trigger. 
+
+
+
 \begin{table}[h]
 \begin{tabular}{|c|c|}
 Track Variable & Cut\\
@@ -32,5 +39,19 @@ $2.0\leq  \eta < 2.4 $ & 2.2 \\
 \label{tab:zwindows}
 \end{table}
 
-Including these criteria for the optimized track MET measurement reduces the threshold at at data-taking rate of 35kHz from 235GeV to 60GeV. This threshold corresponds close to the simulated true track MET performance. The threshold of 60 GeV gives 95$\%$ efficiency for the trigger turn at 300GeV in generator level MET. 
+To gauge the performance of track-based MET, we compare the reconstructed track-based MET to simulated tracking particles, which are the simulation level trajectories of charged particles in an event. The tracking particles are used to compute the simulated MET using the same algorithm as the reconstructed L1 tracks. This gives the expected L1 track MET in the case where no fake tracks are included in the MET computation. Figure~\ref{fig:TkMETPerformance} shows the data-taking L1 rate for the track MET from reconstructed tracks and the tracking particles. Applying only the $\vert \Delta z\left(PV_{z}, trk_{z}\right) \vert$ cuts in Table~\ref{tab:zwindows} gives an L1 rate of 35kHz for a track-based MET threshold at 200GeV. Applying the full track selection inTable~\ref{tab:trkpurity} shows that this threshold is lowered to 60GeV which is the same threshold as when only simulated true charged particle trajectories are used for the MET computataion. 
+This allows to keep a low trigger turn-on for offline-MET for BSM models like the BSM Stop signal. The trigger turn-on at 95$\%$ is lowered from 500~GeV applying only the primary vertex constraint to 300~Gev when including the full selection of track selection. 
+%The trigger turn-on in the BSM stop sample gives 95$\%$ efficiency for the trigger turn at 350~GeV for generator level MET. 
+%%%%Include preliminary plots from Emily%%%%%%%%%%%
+\begin{figure}
+\includegraphics[width=0.45\textwidth ]{MinBiasTKMETRatePlot.pdf}
+\includegraphics[width=0.45\textwidth ]{turnonMET.pdf}
+\caption{}
+\label{fig:TkMETPerformance}
+\end{figure}
+
+
+
+%Including these criteria for the optimized track MET measurement reduces the threshold at at data-taking rate of 35kHz from 200~GeV to 60~GeV. This threshold corresponds close to the simulated true track MET performance. 
+
 
