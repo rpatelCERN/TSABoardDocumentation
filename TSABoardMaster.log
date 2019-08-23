@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  20 AUG 2019 18:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  23 AUG 2019 14:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -525,56 +525,64 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./TrackMET.tex [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<StopSamplePUFakeRatePt.pdf, id=11, 569.12625pt x 408.52625pt>
+File: StopSamplePUFakeRatePt.pdf Graphic file (type pdf)
 
-LaTeX Warning: Reference `sec:FastHisto' on page 2 undefined on input line 27.
+<use StopSamplePUFakeRatePt.pdf>
+Package pdftex.def Info: StopSamplePUFakeRatePt.pdf used on input line 13.
+(pdftex.def)             Requested size: 292.5pt x 209.96637pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<MinBiasTKMETRatePlot.pdf, id=11, 569.12625pt x 546.04pt>
+
+LaTeX Warning: Reference `sec:FastHisto' on page 2 undefined on input line 31.
+
+[2 <./StopSamplePUFakeRatePt.pdf, page is rotated 90 degrees>]
+<MinBiasTKMETRatePlot.pdf, id=61, 569.12625pt x 546.04pt>
 File: MinBiasTKMETRatePlot.pdf Graphic file (type pdf)
 
 <use MinBiasTKMETRatePlot.pdf>
-Package pdftex.def Info: MinBiasTKMETRatePlot.pdf used on input line 47.
+Package pdftex.def Info: MinBiasTKMETRatePlot.pdf used on input line 53.
 (pdftex.def)             Requested size: 175.49881pt x 168.37914pt.
- <turnonMET.pdf, id=12, 569.12625pt x 546.04pt>
+ <turnonMET.pdf, id=62, 569.12625pt x 546.04pt>
 File: turnonMET.pdf Graphic file (type pdf)
 
 <use turnonMET.pdf>
-Package pdftex.def Info: turnonMET.pdf used on input line 48.
+Package pdftex.def Info: turnonMET.pdf used on input line 54.
 (pdftex.def)             Requested size: 175.49881pt x 168.37914pt.
- [2]) (./JetAlgo.tex [3 <./MinBiasTKMETRatePlot.pdf, page is rotated 90 degrees
+) (./JetAlgo.tex [3] [4 <./MinBiasTKMETRatePlot.pdf, page is rotated 90 degrees
 > <./turnonMET.pdf, page is rotated 90 degrees>]
-<NoPUTTBarEff.pdf, id=108, 569.12625pt x 542.025pt>
+<NoPUTTBarEff.pdf, id=155, 569.12625pt x 542.025pt>
 File: NoPUTTBarEff.pdf Graphic file (type pdf)
  <use NoPUTTBarEff.pdf>
 Package pdftex.def Info: NoPUTTBarEff.pdf used on input line 14.
 (pdftex.def)             Requested size: 175.49881pt x 167.14105pt.
 
-<NoPUTTBarPtEff.pdf, id=109, 569.12625pt x 553.06625pt>
+<NoPUTTBarPtEff.pdf, id=156, 569.12625pt x 553.06625pt>
 File: NoPUTTBarPtEff.pdf Graphic file (type pdf)
 
 <use NoPUTTBarPtEff.pdf>
 Package pdftex.def Info: NoPUTTBarPtEff.pdf used on input line 15.
 (pdftex.def)             Requested size: 175.49881pt x 170.54578pt.
 
-<StopSamplePUEtaEff.pdf, id=110, 569.12625pt x 542.025pt>
+<StopSamplePUEtaEff.pdf, id=157, 569.12625pt x 542.025pt>
 File: StopSamplePUEtaEff.pdf Graphic file (type pdf)
 
 <use StopSamplePUEtaEff.pdf>
 Package pdftex.def Info: StopSamplePUEtaEff.pdf used on input line 16.
 (pdftex.def)             Requested size: 175.49881pt x 167.14105pt.
 
-<StopSamplePUPtEff.pdf, id=111, 569.12625pt x 553.06625pt>
+<StopSamplePUPtEff.pdf, id=158, 569.12625pt x 553.06625pt>
 File: StopSamplePUPtEff.pdf Graphic file (type pdf)
 
 <use StopSamplePUPtEff.pdf>
 Package pdftex.def Info: StopSamplePUPtEff.pdf used on input line 17.
 (pdftex.def)             Requested size: 175.49881pt x 170.54578pt.
- [4] [5 <./NoPUTTBarEff.pdf, page is rotated 90 degrees> <./NoPUTTBarPtEff.pdf,
+ [5] [6 <./NoPUTTBarEff.pdf, page is rotated 90 degrees> <./NoPUTTBarPtEff.pdf,
  page is rotated 90 degrees> <./StopSamplePUEtaEff.pdf, page is rotated 90 degr
 ees> <./StopSamplePUPtEff.pdf, page is rotated 90 degrees>] <SignalEfficiencyVs
-Rate_TkHT.pdf, id=291, 569.12625pt x 553.06625pt>
+Rate_TkHT.pdf, id=338, 569.12625pt x 553.06625pt>
 File: SignalEfficiencyVsRate_TkHT.pdf Graphic file (type pdf)
 
 <use SignalEfficiencyVsRate_TkHT.pdf>
@@ -582,7 +590,7 @@ Package pdftex.def Info: SignalEfficiencyVsRate_TkHT.pdf used on input line 29.
 
 (pdftex.def)             Requested size: 175.49881pt x 170.54578pt.
 
-<SignalEfficiencyVsRate_TkMHT.pdf, id=292, 569.12625pt x 553.06625pt>
+<SignalEfficiencyVsRate_TkMHT.pdf, id=339, 569.12625pt x 553.06625pt>
 File: SignalEfficiencyVsRate_TkMHT.pdf Graphic file (type pdf)
 
 <use SignalEfficiencyVsRate_TkMHT.pdf>
@@ -590,19 +598,19 @@ Package pdftex.def Info: SignalEfficiencyVsRate_TkMHT.pdf used on input line 30
 .
 (pdftex.def)             Requested size: 175.49881pt x 170.54578pt.
 
-<TurnOnTrackHT.pdf, id=293, 569.12625pt x 547.04375pt>
+<TurnOnTrackHT.pdf, id=340, 569.12625pt x 547.04375pt>
 File: TurnOnTrackHT.pdf Graphic file (type pdf)
  <use TurnOnTrackHT.pdf>
 Package pdftex.def Info: TurnOnTrackHT.pdf used on input line 31.
 (pdftex.def)             Requested size: 175.49881pt x 168.68864pt.
 
-<TurnOnTrackMHT.pdf, id=294, 569.12625pt x 547.04375pt>
+<TurnOnTrackMHT.pdf, id=341, 569.12625pt x 547.04375pt>
 File: TurnOnTrackMHT.pdf Graphic file (type pdf)
 
 <use TurnOnTrackMHT.pdf>
 Package pdftex.def Info: TurnOnTrackMHT.pdf used on input line 32.
 (pdftex.def)             Requested size: 175.49881pt x 168.68864pt.
-) [6] [7 <./SignalEfficiencyVsRate_TkHT.pdf, page is rotated 90 degrees> <./Sig
+) [7] [8 <./SignalEfficiencyVsRate_TkHT.pdf, page is rotated 90 degrees> <./Sig
 nalEfficiencyVsRate_TkMHT.pdf, page is rotated 90 degrees> <./TurnOnTrackHT.pdf
 , page is rotated 90 degrees> <./TurnOnTrackMHT.pdf, page is rotated 90 degrees
 >] (./TSABoardMaster.aux)
@@ -611,13 +619,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2738 strings out of 493014
- 35489 string characters out of 6133351
- 100033 words of memory out of 5000000
- 6226 multiletter control sequences out of 15000+600000
+ 2744 strings out of 493014
+ 35654 string characters out of 6133351
+ 99041 words of memory out of 5000000
+ 6231 multiletter control sequences out of 15000+600000
  9803 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,11n,24p,1448b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,11n,24p,1448b,221s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
@@ -626,10 +634,10 @@ sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
 /local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
 ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
 l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on TSABoardMaster.pdf (7 pages, 282751 bytes).
+Output written on TSABoardMaster.pdf (8 pages, 299199 bytes).
 PDF statistics:
- 502 PDF objects out of 1000 (max. 8388607)
- 222 compressed objects within 3 object streams
+ 549 PDF objects out of 1000 (max. 8388607)
+ 242 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
