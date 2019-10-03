@@ -1,5 +1,20 @@
-# TSABoardDocumentation
+# TDR Plots and Documentation
+
 For PhaseII TDR documentation
+
+# Generating Input Ntuples
+
+Follow latest PhaseII CMSSW recipe
+https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideL1TPhase2Instructions#Recipe
+
+May need to modify the recipe to get the latest Hybrid tracking code:
+https://gitlab.cern.ch/cms-tracker-phase2-backend-development/BE_software/L1Tracking/tree/master
+
+Use latest version of track ntuples with jet collections here (on branch TDRBranch): 
+https://gitlab.cern.ch/L1TrackJetsPrimaryVtx/TrackletL1PVJets/tree/TDRBranch
+
+
+# TDR Plotting Codes
 
 This area now includes plotting macros and codes to run over ntuples and produce the plots for the L1 TDR. 
 
