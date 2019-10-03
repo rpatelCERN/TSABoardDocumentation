@@ -13,6 +13,6 @@ Stop sample (PU200). To generate the input for the macro run the event loop in P
 
 For the Hidden Higgs samples in the menu section of the TDR, we produce a L1 HT Rate vs. signal effiency plot as well 
 as the signal yields vs. lifetime for both prompt and extended tracks input to track jets. The macro for the input of the signal efficiency 
-and L1Rate (from the minbias sample) is the same: Prompt4parameter/L1RateDisplacedPU.C . It includes the output for both prompt HT and 
-HT+displaced tag. The plotting macro for the L1 HT Rate vs. signal effiency plot is Prompt4parameter/QuickRateEff.C . 
+and L1Rate (from the minbias sample) is the same: ExtendedTracking/L1RateDisplacedPU.C . It includes the output for both prompt HT and 
+HT+displaced tag. The plotting macro for the L1 HT Rate vs. signal effiency plot is ExtendedTracking/QuickRateEff.C . 
 
